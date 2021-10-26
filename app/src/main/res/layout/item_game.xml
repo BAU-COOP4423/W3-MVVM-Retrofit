@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="6dp">
+
+        <ImageView
+            android:id="@+id/ivThumbnail"
+            android:layout_width="156dp"
+            android:layout_height="156dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            android:elevation="10dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <LinearLayout
+            android:id="@+id/llContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/ivThumbnail"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvGenre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvPlatform"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvPublisher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvDeveloper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvShortDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivThumbnail" />
+
+        <TextView
+            android:id="@+id/tvReleaseDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvShortDescription"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
+
+    <!--
+    {
+    "id": 1,
+    "title": "Dauntless",
+    "thumbnail": "https://www.freetogame.com/g/1/thumbnail.jpg",
+    "short_description": "A free-to-play, co-op action RPG with gameplay similar to Monster Hunter.",
+    "game_url": "https://www.freetogame.com/open/dauntless",
+    "genre": "MMORPG",
+    "platform": "PC (Windows)",
+    "publisher": "Phoenix Labs",
+    "developer": "Phoenix Labs, Iron Galaxy",
+    "release_date": "2019-05-21",
+    "freetogame_profile_url": "https://www.freetogame.com/dauntless"
+    }
+    -->
