@@ -16,6 +16,11 @@
 - ui: View classes along with their corresponding ViewModel.
 - utils: Utility classes.
 
+## About Braches
+- feature/main-list: The branch has only Main Activity.
+- feature/game-detail: The branch is referenced from the feature/main-list and it has GameDetail Activity.
+
+
 ## Clone the Repository
 
 ### With SSH
