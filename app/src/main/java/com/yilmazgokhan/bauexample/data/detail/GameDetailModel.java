@@ -1,16 +1,22 @@
-package com.yilmazgokhan.bauexample.data;
+package com.yilmazgokhan.bauexample.data.detail;
 
 import com.google.gson.annotations.SerializedName;
 
-public class GameModel {
+import java.util.List;
+
+public class GameDetailModel {
     @SerializedName("id")
     private Integer id;
     @SerializedName("title")
     private String title;
     @SerializedName("thumbnail")
     private String thumbnail;
+    @SerializedName("status")
+    private String status;
     @SerializedName("short_description")
     private String shortDescription;
+    @SerializedName("description")
+    private String description;
     @SerializedName("game_url")
     private String gameUrl;
     @SerializedName("genre")
@@ -25,6 +31,10 @@ public class GameModel {
     private String releaseDate;
     @SerializedName("freetogame_profile_url")
     private String freetogameProfileUrl;
+    @SerializedName("minimum_system_requirements")
+    private MinimumSystemRequirements minimumSystemRequirements;
+    @SerializedName("screenshots")
+    private List<Screenshot> screenshots = null;
 
     public Integer getId() {
         return id;
@@ -50,12 +60,28 @@ public class GameModel {
         this.thumbnail = thumbnail;
     }
 
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
     public String getShortDescription() {
         return shortDescription;
     }
 
     public void setShortDescription(String shortDescription) {
         this.shortDescription = shortDescription;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getGameUrl() {
@@ -112,5 +138,21 @@ public class GameModel {
 
     public void setFreetogameProfileUrl(String freetogameProfileUrl) {
         this.freetogameProfileUrl = freetogameProfileUrl;
+    }
+
+    public MinimumSystemRequirements getMinimumSystemRequirements() {
+        return minimumSystemRequirements;
+    }
+
+    public void setMinimumSystemRequirements(MinimumSystemRequirements minimumSystemRequirements) {
+        this.minimumSystemRequirements = minimumSystemRequirements;
+    }
+
+    public List<Screenshot> getScreenshots() {
+        return screenshots;
+    }
+
+    public void setScreenshots(List<Screenshot> screenshots) {
+        this.screenshots = screenshots;
     }
 }

@@ -1,10 +1,8 @@
-package com.yilmazgokhan.bauexample.ui;
+package com.yilmazgokhan.bauexample.ui.main;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
@@ -12,13 +10,14 @@ import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import com.yilmazgokhan.bauexample.R;
 import com.yilmazgokhan.bauexample.adapter.GameAdapter;
-import com.yilmazgokhan.bauexample.data.GameModel;
+import com.yilmazgokhan.bauexample.data.main_list.GameModel;
 import com.yilmazgokhan.bauexample.databinding.ActivityMainBinding;
+import com.yilmazgokhan.bauexample.ui.detail.GameDetailActivity;
 
 import java.util.List;
 
+import static com.yilmazgokhan.bauexample.util.Constants.ARG_GAME_ID;
 import static com.yilmazgokhan.bauexample.util.Constants.CUSTOM_TAG;
 
 public class MainActivity extends AppCompatActivity {
@@ -63,8 +62,11 @@ public class MainActivity extends AppCompatActivity {
     private void initClicks() {
         gameAdapter.setOnClickListener((pos, gameModel) -> {
             Log.d(CUSTOM_TAG, "onClick: ");
-            Toast.makeText(this, gameModel.getTitle(), Toast.LENGTH_SHORT).show();
-            // TODO: 25.10.2021
+            //region show GameDetailActivity & send the gameId to the activity
+            Intent intent = new Intent(MainActivity.this, GameDetailActivity.class);
+            intent.putExtra(ARG_GAME_ID, gameModel.getId());
+            startActivity(intent);
+            //endregion
         });
     }
 

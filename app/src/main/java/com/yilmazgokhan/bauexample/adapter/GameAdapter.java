@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.yilmazgokhan.bauexample.R;
-import com.yilmazgokhan.bauexample.data.GameModel;
+import com.yilmazgokhan.bauexample.data.main_list.GameModel;
 import com.yilmazgokhan.bauexample.databinding.ItemGameBinding;
 
 import org.jetbrains.annotations.NotNull;
