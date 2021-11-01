@@ -1,4 +1,4 @@
-package com.yilmazgokhan.bauexample.ui;
+package com.yilmazgokhan.bauexample.ui.main;
 
 import android.util.Log;
 
@@ -6,7 +6,7 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.yilmazgokhan.bauexample.data.GameModel;
+import com.yilmazgokhan.bauexample.data.main_list.GameModel;
 import com.yilmazgokhan.bauexample.service.ClientGame;
 import com.yilmazgokhan.bauexample.service.IRequest;
 
